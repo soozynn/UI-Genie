@@ -7,7 +7,6 @@ module.exports = {
         "soft-dark": "#101820",
         "soft-grey": "#F4F4F5B2",
         "dark-grey":"#94A3B8",
-        "dark": "#0000"
       },
     },
   },

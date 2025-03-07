@@ -1,9 +1,10 @@
 "use client";
 
 import { useSidebar } from "@/context/SidebarContext";
+import Link from "next/link";
 import AuthButton from "./AuthButton";
 import SidebarButton from "./SidebarButton";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Sidebar() {
   const { isOpenSidebar } = useSidebar();
@@ -20,7 +21,8 @@ export default function Sidebar() {
             className="flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-none transition-[width,height,padding] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 h-12 text-sm"
             href="/"
           >
-            <img src="/lamp.svg" alt="Logo" width={50} height={60} />
+            <Image src="/lamp.svg" alt="Logo" width={50} height={60} priority />
+
             <div className="grid flex-1 text-left text-lg leading-tight">
               <span className="truncate font-semibold text-dark-grey">
                 UI Genie AI
