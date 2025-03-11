@@ -19,8 +19,8 @@ export default function SidebarButton({ children, name }: SidebarButtonProps) {
 
   return (
     <li
-      className={`flex items-center rounded-sm text-lg p-2 ${
-        isActive ? "bg-neon-blue text-white" : "bg-transparent text-soft-dark"
+      className={`flex items-center rounded-xl text-lg p-2 ${
+        isActive ? "bg-neon-blue text-white" : "bg-transparent text-dark-blue"
       }`}
     >
       {children}

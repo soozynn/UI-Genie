@@ -10,7 +10,53 @@ export default function Sidebar() {
   const { isOpenSidebar, toggleSidebar } = useSidebar();
 
   return (
-    <>
+    <aside
+      className={`h-screen text-white transition-all duration-300
+      ${isOpenSidebar ? "w-64" : "w-16"} flex flex-col`}
+    >
+      {isOpenSidebar ? (
+        <button
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground size-9 h-7 w-7 fixed z-50 m-2"
+          data-sidebar="trigger"
+          onClick={toggleSidebar}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </button>
+      ) : (
+        <button
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground size-9 h-7 w-7 fixed z-50 m-2"
+          data-sidebar="trigger"
+          onClick={toggleSidebar}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </button>
+      )}
       <button
         className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground size-9 h-7 w-7 fixed z-50 m-2"
         data-sidebar="trigger"
@@ -32,10 +78,10 @@ export default function Sidebar() {
         </svg>
       </button>
 
-      <div
+      <nav
         className={`${
           isOpenSidebar ? "translate-x-0" : "-translate-x-full"
-        } fixed z-50 gap-4 shadow-lg transition ease-in-out inset-y-0 left-0 h-full border-r sm:w-100 p-1 [&>button]:hidden bg-grey-dark border-none`}
+        } fixed z-50 gap-4 shadow-lg transition ease-in-out inset-y-0 left-0 h-full border-r sm:w-100 p-1 bg-dark-blue border-none`}
       >
         <div className="flex size-full flex-col">
           <div className="flex flex-col gap-2 py-4 px-2 border-none">
@@ -49,6 +95,7 @@ export default function Sidebar() {
                 width={50}
                 height={60}
                 priority
+                className="bg-neon-blue"
               />
 
               <div className="grid flex-1 text-left text-lg leading-tight">
@@ -171,7 +218,7 @@ export default function Sidebar() {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </nav>
+    </aside>
   );
 }
