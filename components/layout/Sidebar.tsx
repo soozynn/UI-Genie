@@ -16,7 +16,7 @@ export default function Sidebar() {
     >
       {isOpenSidebar ? (
         <button
-          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground size-9 h-7 w-7 fixed z-50 m-2"
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 size-9 h-7 w-7 fixed z-50 m-2"
           data-sidebar="trigger"
           onClick={toggleSidebar}
         >
@@ -37,7 +37,7 @@ export default function Sidebar() {
         </button>
       ) : (
         <button
-          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground size-9 h-7 w-7 fixed z-50 m-2"
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 size-9 h-7 w-7 fixed z-50 m-2"
           data-sidebar="trigger"
           onClick={toggleSidebar}
         >
@@ -58,7 +58,7 @@ export default function Sidebar() {
         </button>
       )}
       <button
-        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground size-9 h-7 w-7 fixed z-50 m-2"
+        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 size-9 h-7 w-7 fixed z-50 m-2"
         data-sidebar="trigger"
         onClick={toggleSidebar}
       >
@@ -81,12 +81,12 @@ export default function Sidebar() {
       <nav
         className={`${
           isOpenSidebar ? "translate-x-0" : "-translate-x-full"
-        } fixed z-50 gap-4 shadow-lg transition ease-in-out inset-y-0 left-0 h-full border-r sm:w-100 p-1 bg-dark-blue border-none`}
+        } fixed z-50 gap-4 shadow-lg transition ease-in-out inset-y-0 left-0 h-full border-r sm:w-100 p-1 bg-deep-navy border-none`}
       >
         <div className="flex size-full flex-col">
           <div className="flex flex-col gap-2 py-4 px-2 border-none">
             <Link
-              className="flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-none transition-[width,height,padding] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 h-12 text-sm"
+              className="flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-none disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none h-12 text-sm"
               href="/"
             >
               <Image
@@ -95,14 +95,14 @@ export default function Sidebar() {
                 width={50}
                 height={60}
                 priority
-                className="bg-neon-blue"
+                className="bg-soft-electric-blue"
               />
 
               <div className="grid flex-1 text-left text-lg leading-tight">
                 <span className="truncate font-semibold text-dark-grey">
                   UI Genie AI
                 </span>
-                <span className="truncate text-base text-sidebar-primary text-neon-blue">
+                <span className="truncate text-base text-purple-blue">
                   AI-powered CSS with UI Genie
                 </span>
               </div>
@@ -110,7 +110,7 @@ export default function Sidebar() {
           </div>
 
           <div className="grow p-2 pt-3 text-white">
-            <div className="duration-200 flex h-8 shrink-0 items-center rounded-md px-2 text-base font-medium outline-none transition-[margin,opa] ease-linear text-grey-dark">
+            <div className="duration-200 flex h-8 shrink-0 items-center rounded-md px-2 pb-3 text-base font-medium outline-none ease-linear">
               Choose the AI
             </div>
 
@@ -153,7 +153,7 @@ export default function Sidebar() {
           <div data-sidebar="footer" className="flex flex-col gap-2 p-2">
             <div data-sidebar="footer" className="flex flex-col gap-2 p-2">
               <div className="p-1 visible opacity-100 transition-opacity delay-200 duration-500">
-                <div className="rounded-lg border text-card-foreground bg-background shadow-none">
+                <div className="rounded-lg border shadow-none">
                   <form>
                     <div className="flex flex-col space-y-1.5 p-4">
                       <div className="text-white font-semibold flex items-center gap-1 text-base">
@@ -173,7 +173,7 @@ export default function Sidebar() {
                         </svg>
                         Add-on
                       </div>
-                      <div className="text-muted-foreground text-sm text-dark-grey">
+                      <div className="text-sm">
                         {"We're going to add features slowly 😊"}
                       </div>
                     </div>

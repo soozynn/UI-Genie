@@ -7,7 +7,7 @@ export default function Home() {
           data-testid="home-h2"
         >
           Create.
-          <span className="text-primary">Refine.</span>
+          <span>Refine.</span>
           Deliver.
         </h2>
         <p className="text-center font-normal">

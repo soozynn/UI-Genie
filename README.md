@@ -10,6 +10,10 @@ GPT-4와 같은 AI 모델을 활용하여 사용자 설명을 기반으로 Tailw
 
 사용자의 자연어 설명을 기반으로 특정 UI 프레임워크(Tailwind CSS, Chakra UI 등)의 코드를 생성하고 즉각적인 미리보기를 제공하는 전문화된 도구를 만들어보고 싶었습니다.
 
+#### Color Picker
+
+- [Color Hunt](https://colorhunt.co/) 참조
+
 ### Tech
 
 #### tailwindcss v4

@@ -20,13 +20,13 @@ export default function SidebarButton({ children, name }: SidebarButtonProps) {
   return (
     <li
       className={`flex items-center rounded-xl text-lg p-2 ${
-        isActive ? "bg-neon-blue text-white" : "bg-transparent text-dark-blue"
+        isActive ? "bg-purple-blue text-white" : "bg-transparent text-dark-blue"
       }`}
     >
       {children}
       <Link
         href={href}
-        className="flex w-full items-center gap-1 overflow-hidden rounded-md p-2 text-left outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 h-8"
+        className="flex w-full items-center gap-1 overflow-hidden rounded-md p-2 text-left outline-none disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 h-8"
       >
         {name}
       </Link>

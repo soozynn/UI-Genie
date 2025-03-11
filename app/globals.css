@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-neon-blue: oklch(53.5% 0.26 264.8);
-  --color-dark-blue: oklch(22% 0.05 270);
-  --color-soft-grey: oklch(95.5% 0.01 250 / 70%);
-  --color-dark-grey: oklch(72.3% 0.02 250);
+  --color-purple-blue: oklch(58.7% 0.204 277.8);
+  --color-black: oklch(8% 0.015 260);
+  --color-deep-navy: oklch(10.2% 0.08 270);
 }
 
 body {
