@@ -1,24 +1,33 @@
 export default function Home() {
   return (
-    <div className="p-2 pt-10 sm:px-11 sm:pt-2 flex flex-col space-y-4 overflow-hidden pr-2 sm:pr-11">
-      <div className="flex flex-col space-y-1.5 items-center justify-center">
-        <h2
-          className="text-4xl font-medium tracking-tighter sm:text-5xl"
-          data-testid="home-h2"
-        >
-          Create.
-          <span>Refine.</span>
+    <div className="flex flex-col p-2">
+      <div className="flex flex-col items-center justify-center space-y-1.5">
+        <h2 className="text-4xl font-medium sm:text-5xl" data-testid="home-h2">
+          Create. <span className="text-purple-blue">Refine. </span>
           Deliver.
         </h2>
         <p className="text-center font-normal">
-          Build fully responsive{" "}
-          <span className="font-semibold">Tailwind or Chakra UI Websites</span>{" "}
-          effortlessly using <span className="font-semibold">AI-powered </span>
-          text prompts and image inputs.
+          <div>
+            Build fully responsive{" "}
+            <span className="font-semibold">
+              Tailwind or Chakra UI Websites
+            </span>{" "}
+            effortlessly using
+          </div>
+          <div>
+            <span className="font-semibold">AI-powered </span>
+            text prompts and image inputs.
+          </div>
         </p>
       </div>
 
-      <form>폼 기능 자리 // 매우 중요</form>
+      <form>
+        <div>폼 작성하는 자리 / x 버튼을 통해 기존 작성 내용 삭제</div>
+        <div>
+          라이브러리 및 프레임워크 선택 자리, 이미지도 업로드 가능하면.. 좋곘..
+          검색 버튼
+        </div>
+      </form>
     </div>
   );
 }
