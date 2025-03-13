@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="size-full p-2 pt-10 sm:px-11 sm:pt-2 relative flex min-h-full w-auto flex-col items-center justify-center space-y-4 overflow-hidden pr-2 sm:pr-11">
-      <div className="flex w-full flex-col items-center space-y-1.5">
+    <div className="p-2 pt-10 sm:px-11 sm:pt-2 flex flex-col space-y-4 overflow-hidden pr-2 sm:pr-11">
+      <div className="flex flex-col space-y-1.5 items-center justify-center">
         <h2
           className="text-4xl font-medium tracking-tighter sm:text-5xl"
           data-testid="home-h2"

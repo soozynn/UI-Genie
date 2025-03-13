@@ -12,15 +12,15 @@ export default function AuthButton({ children, name }: AuthButtonProps) {
 
   return (
     <Link
-      className={`w-full cursor-pointer rounded-lg ${
-        isLogin ? "bg-purple-blue text-black" : "bg-black text-white"
+      className={`flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-lg px-4 py-2 text-xl font-medium whitespace-nowrap shadow transition-colors ${
+        isLogin
+          ? "bg-purple-blue text-black hover:brightness-75"
+          : "bg-black text-white hover:bg-gray-900"
       }`}
       href={lowerPathName}
     >
-      <button className="gap-2 whitespace-nowrap text-xl font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 shadow hover:opacity-90 h-12 px-4 py-2 flex w-full items-center justify-center">
-        {children}
-        <span className="block">{name}</span>
-      </button>
+      {children}
+      <span className="block">{name}</span>
     </Link>
   );
 }

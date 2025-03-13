@@ -19,14 +19,14 @@ export default function SidebarButton({ children, name }: SidebarButtonProps) {
 
   return (
     <li
-      className={`flex items-center rounded-xl text-lg p-2 ${
-        isActive ? "bg-purple-blue text-white" : "bg-transparent text-dark-blue"
+      className={`hover:bg-purple-blue flex items-center rounded-xl p-2 text-lg ${
+        isActive ? "bg-purple-blue text-white" : "text-dark-blue bg-transparent"
       }`}
     >
       {children}
       <Link
         href={href}
-        className="flex w-full items-center gap-1 overflow-hidden rounded-md p-2 text-left outline-none disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 h-8"
+        className="flex h-8 w-full items-center gap-1 overflow-hidden rounded-md p-2 text-left outline-none disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50"
       >
         {name}
       </Link>
