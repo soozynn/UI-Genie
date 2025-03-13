@@ -77,9 +77,11 @@ export default function Sidebar() {
       )}
 
       <nav
-        className={`${
-          isOpenSidebar ? "translate-x-0" : "-translate-x-full"
-        } bg-deep-navy fixed inset-y-0 left-0 z-50 h-full gap-4 border-r border-none p-1 shadow-lg transition ease-in-out sm:w-100`}
+        className={`bg-deep-navy fixed inset-y-0 left-0 z-50 h-full w-64 border-r border-none p-1 shadow-lg transition-all duration-500 ease-in-out ${
+          isOpenSidebar
+            ? "translate-x-0 opacity-100"
+            : "-translate-x-full opacity-0"
+        }`}
       >
         <div className="flex size-full flex-col">
           <div className="flex flex-col gap-2 px-2 py-4">

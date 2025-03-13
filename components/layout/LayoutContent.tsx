@@ -8,7 +8,7 @@ export default function LayoutContent({
 }: {
   children: React.ReactNode;
 }) {
-  const { isOpenSidebar } = useSidebar(); // 사이드바 상태 가져오기
+  const { isOpenSidebar, toggleSidebar } = useSidebar(); // 사이드바 상태 가져오기
 
   return (
     <>
@@ -17,6 +17,9 @@ export default function LayoutContent({
         className={`absolute inset-0 flex items-center justify-center transition-opacity ${
           isOpenSidebar ? "bg-black/50" : ""
         }`}
+        onClick={() => {
+          if (isOpenSidebar) toggleSidebar();
+        }}
       >
         {children}
       </main>
