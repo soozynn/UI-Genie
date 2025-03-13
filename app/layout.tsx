@@ -26,12 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-screen`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <SidebarProvider>
           <Sidebar />
-          <main className="size-full">{children}</main>
+          <main>{children}</main>
         </SidebarProvider>
       </body>
     </html>

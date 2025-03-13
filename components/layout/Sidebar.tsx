@@ -55,7 +55,7 @@ export default function Sidebar() {
     >
       {!isOpenSidebar && (
         <button
-          className="fixed z-50 m-2 size-9 h-7 w-7 cursor-pointer items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+          className="fixed z-50 m-2 h-7 w-7 cursor-pointer px-2 py-4"
           data-sidebar="trigger"
           onClick={toggleSidebar}
         >
@@ -65,7 +65,7 @@ export default function Sidebar() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-6"
+            className="size-8"
           >
             <path
               strokeLinecap="round"
@@ -84,7 +84,7 @@ export default function Sidebar() {
         <div className="flex size-full flex-col">
           <div className="flex flex-col gap-2 px-2 py-4">
             <button
-              className="z-50 m-2 size-9 h-7 w-7 cursor-pointer items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap text-white focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+              className="z-50 m-2 h-7 w-7 cursor-pointer items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap text-white"
               data-sidebar="trigger"
               onClick={toggleSidebar}
             >
@@ -94,7 +94,7 @@ export default function Sidebar() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="size-6"
+                className="size-8"
               >
                 <path
                   strokeLinecap="round"

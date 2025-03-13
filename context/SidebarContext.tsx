@@ -1,21 +1,41 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import debounce from "@/utils/debounce";
+import {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 
 interface SidebarContextType {
   isOpenSidebar: boolean;
-  setIsOpenSidebar: () => void;
   toggleSidebar: () => void;
 }
 
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export default function SidebarProvider({ children }: { children: ReactNode }) {
-  // 해당 컨텍스트 안에서 너비 조정하여 true, false 조정
-
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
 
   const toggleSidebar = () => setIsOpenSidebar((prev) => !prev);
+
+  useEffect(() => {
+    // NOTE: ⛔️ 서버 사이드 SSR에서 실행되지 않도록 체크
+    if (typeof window === "undefined") return;
+
+    const handleResize = debounce(() => {
+      setIsOpenSidebar(window.innerWidth >= 768);
+    }, 200);
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <SidebarContext.Provider value={{ isOpenSidebar, toggleSidebar }}>

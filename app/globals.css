@@ -8,9 +8,6 @@
   --color-dark-grey: oklch(71% 0.04 256.83);
 }
 
-html,
 body {
   background: var(--color-soft-lavender);
-  height: 100%;
-  width: 100%;
 }
